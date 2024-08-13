@@ -61,7 +61,7 @@ The script has the following structure:
 4. Processing using pysam library
 5. Main function. Script management
 
-Firstly all required libraries are imported, then the logging configuration for a script is perfromed using built-in logging module.
+Firstly all required libraries are imported, then the logging configuration for a script is performed using built-in logging module.
 The main() function manages the script work and calls all other functions, when the script is launched.
 It prints the welcome and help messages, orders to receive the required mandatory keys and processes the keys, if they are provided correctly. 
 If the keys are provided incorrectly, the error message will be returned.
