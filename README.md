@@ -169,9 +169,10 @@ The output file has following fields
 [ CHROM#, POS, RS_ID, REF, ALT ]
 
 The script also provides a simple log file as time.log, giving timestamps of the script execution
-File time.log can be found in /app/ directory with the FP_SNPs_processing_2.py
+File time.log can be found in /app/ directory with the processing script itself - the FP_SNPs_processing_2.py
 
 If you want to see the whole time.log file you can type:
 ```sh
 cat time.log
 ```
+That is all for now, thank you for your interest.
