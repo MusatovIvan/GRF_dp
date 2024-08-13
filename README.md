@@ -8,7 +8,7 @@ The basic article is as follows: «Quickly identifying identical and closely rel
 using genotype data»: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469481/
 
 The general task is to define, which of two alleles is a reference or an alternative allele.
-The preprocessing script assumes, that the user has a python version not lower than 3.8.10. and all standard built-in libraries installed.
+The preprocessing script assumes, that the user has a python version not lower than (3.8.10) and all standard built-in libraries installed.
 Basically there are two main steps in this task: preprocessing and main processing.
 
 ### 1. Preprocessing
