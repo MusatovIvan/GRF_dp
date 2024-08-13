@@ -45,11 +45,11 @@ Basically there are two main steps in this task: preprocessing and main processi
    Note: The initial file FP_SNPs.txt has the following columns: rs#, chromosome, GB37_position, GB38_position, allele_1, allele_2
 
     The preprocessing script
-   1. Removes the GB37_position column and leaves only GB38 position, which is specified as POS in the output file \
-   2. Moves the columns in the following order: '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2' \
-   3. Appends "chr" string to the number of chromosome: instead "1" we get "chr1" \
-   4. Appends "rs" string to the number of RS_ID: instead "4184584" we get "rs4184584" \
-      Reference SNP cluster ID - rsID number is a unique label ("rs" followed by a number) used by researchers and databases to identify a specific SNP (Single Nucleotide Polymorphism)) \
+   1. Removes the GB37_position column and leaves only GB38 position, which is specified as POS in the output file
+   2. Moves the columns in the following order: '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2'
+   3. Appends "chr" string to the number of chromosome: instead "1" we get "chr1"
+   4. Appends "rs" string to the number of RS_ID: instead "4184584" we get "rs4184584"
+      Reference SNP cluster ID - rsID number is a unique label ("rs" followed by a number) used by researchers and databases to identify a specific SNP (Single Nucleotide Polymorphism))
 
    Note: One might do the same preprocessing in bash, if it is preffered. In this pipeline the pythonic way is implemented.
 
