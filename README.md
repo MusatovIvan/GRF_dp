@@ -19,11 +19,12 @@ Basically there are two main steps in this task: preprocessing and main processi
    1.2 GRAF software was downloaded, unzipped and the FP_SNPs.txt file was extracted to the destination folder. \
    Downloaded from: http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetZip.cgi?zip_name=GRAF_files.zip
    ```sh
+   # IF GRCh38.d1.vd1.fa.gz was loaded 
    cd download_folder/ 
    gzip -d GRCh38.d1.vd1.fa.gz
    mv ./GRCh38.d1.vd1.fa /destination/folder/
-   #   
-   tar -xzf destination/folder/file.tar.gz && rm destination/folder/file.tar.gz
+   # IF GrafPkg.tar.gz was loaded
+   tar -xzf destination/folder/GrafPkg.tar.gz && rm destination/folder/GrafPkg.tar.gz
    #
    ```
    1.3 The next step assumes that the files were downloaded, unzipped and moved to their destination folder. \
