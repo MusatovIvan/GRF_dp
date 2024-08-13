@@ -4,8 +4,8 @@ Here we describe the preprocessing in short. The processing of data with FP_SNPs
 
 The preprocessed file can be acquired as described in README.md.
 
-In short the user needs to provide a full path to the file FP_SNPs.txt, and to reference genome FASTA file using
-key:value pairs --snp Value: /type/your/path/here/FP_SNPs.txt --reference:/type/your/path/here/GRCh38.d1.vd1.fa
+In short the user needs to provide a full path to the file FP_SNPs.txt, and to reference genome FASTA file using \
+key:value pairs --snp Value: /type/your/path/here/FP_SNPs.txt --reference:/type/your/path/here/GRCh38.d1.vd1.fa \
 Example: 
 
 ```python3 Preprocessing_script.py --snp Value: /type/your/path/here/FP_SNPs.txt --reference:/type/your/path/here/GRCh38.d1.vd1.fa```
