@@ -68,7 +68,7 @@ To install docker on Linux user might do the following:
 sudo apt update
 sudo apt install docker*
 ```
-One might find useful the following post for installation on Linux-Mint or Ubuntu: https://linuxhint.com/install_docker_linux_mint/
+One might find useful the following post for installation on Linux-Mint or Ubuntu: https://linuxhint.com/install_docker_linux_mint/ \
 If you have Windows, you might get the whole package just downloading docker from the official website.
 
 Once docker is installed you will need to use the provided "Dockerfile", to build the docker image.
