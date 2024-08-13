@@ -175,4 +175,4 @@ If you want to see the whole time.log file you can type:
 ```sh
 cat time.log
 ```
-### That's all for now, thank you for being curious ! :)
+### That's all for now, thank you for being curious ! ;)
