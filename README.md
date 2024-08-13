@@ -5,7 +5,7 @@
 This is a pipeline to process the data (FP_SNPs.txt) received from the GRAF software (version 2.4): 
 https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/Software.cgi.
 The basic article is as follows: «Quickly identifying identical and closely related subjects in large databases \
-using genotype data»: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469481/ . \
+using genotype data»: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469481/
 
 The general task is to define, which of two alleles is a reference or an alternative allele.
 The preprocessing script assumes, that the user has a python version not lower than 3.8.10. and all standard built-in libraries installed.
