@@ -24,7 +24,8 @@ Basically there are two main steps in this task: preprocessing and main processi
    gzip -d GRCh38.d1.vd1.fa.gz
    mv ./GRCh38.d1.vd1.fa /destination/folder/
    # IF GrafPkg.tar.gz was loaded
-   tar -xzf destination/folder/GrafPkg.tar.gz && rm destination/folder/GrafPkg.tar.gz
+   tar -xzf /download_folder/GrafPkg.tar.gz && rm /download_folder/GrafPkg.tar.gz
+   mv FP_SNPs.txt /download_folder && rm -rf /download_folder/GrafPkg/* && mkdir /download_folder/GrafPkg/data/ && mv /download_folder/FP_SNPs.txt /download_folder/GrafPkg/data/FP_SNPs.txt
    #
    ```
    1.3 The next step assumes that the files were downloaded, unzipped and moved to their destination folder. \
