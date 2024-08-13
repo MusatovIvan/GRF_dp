@@ -1,6 +1,6 @@
 # FP_SNPs_README.md
 
-Here we describe the preprocessing in short and more extended we describe processing the data with FP_SNPs_processing_2.py script.
+Here we describe the preprocessing in short. The processing of data with FP_SNPs_processing_2.py script is done on the contrary more explicitly.
 
 The preprocessed file can be acquired as described in README.md.
 
