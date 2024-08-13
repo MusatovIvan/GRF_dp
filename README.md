@@ -9,7 +9,7 @@ using genotype data»: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469481/
 
 The general task is to define, which of two alleles is a reference or an alternative allele.
 The preprocessing script assumes, that the user has a python version not lower than 3.8.10. and all standard built-in libraries installed.
-Basically there are two main steps in this task: preprocessing, main processing
+Basically there are two main steps in this task: preprocessing and main processing
 
 ### 1. Preprocessing
    Preprocessing provides a file in .TSV format transforming FP_SNPs.txt file into a .TSV file (FP_SNPs_10k_GB38_twoAllelsFormat.tsv)
