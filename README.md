@@ -57,8 +57,8 @@ Basically there are two main steps in this task: preprocessing and main processi
 ### 2. Main processing
 
 The provided processing Python script can be launched as provided, assuming that 
-1. All necessary libraries have been installed (using docker or somehow else) \
-2. All mandatory key:value pairs have been provided (see below) \
+1. All necessary libraries have been installed (using docker or somehow else)
+2. All mandatory key:value pairs have been provided (see below)
 
 Probable solution is to install docker on your system and build a docker image,
 launching the docker container with all required libraries and dependencies as provided in the pipeline.
