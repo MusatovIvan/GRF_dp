@@ -72,19 +72,25 @@ One might find useful the following post for installation on Linux-Mint or Ubunt
 If you have Windows, you might get the whole package just downloading docker from the official website.
 
 Once docker is installed you will need to use the provided "Dockerfile", to build the docker image.
+The user can build the image as follows:
+
 ```sh
 docker build -t snpprocimg .
 ```
-The basic image is built on the basis of Ubuntu.22.04
-When docker container is run the python script is launched automatically
+
+The basic image is built on the basis of Ubuntu.22.04. \
+When docker container is run the python script is launched automatically,
 user just needs to specify the folder to mount to container, where the required data lay.
 
 One possible way to launch the Python processing script is to run the docker as follows:
+
 ```sh
+
 docker run -it -v <path_where_chromosomes_and_tsv_file_lay_mount_to_data>:/data snpprocimg /bin/bash
 python3 FP_SNPs_processing_2.py Reference_fasta_files_dirpath:/data/Chromosomes Input_tsv_filename_fullpath:/data/FP_SNPs_10k_GB38_twoAllelsFormat.tsv Output_tsv_filename_fullpath:/data/Results_000.tsv
 
 ```
+
 Note: It is expected that the reference chromosomes lay in the Chromosomes folder, whereas the Input_tsv_file lays directly in the folder mounted as a volume to container,
 according to this manner, the output will be in the same folder, which is mounted to the docker container. The output here is called Results_000.tsv, but the user can call it otherwise.
 
@@ -94,6 +100,7 @@ All tools are installed in the /soft directory, the processing script specifical
 To launch any of these tools once the docker image snpprocimg is run, user can type the tool name in capital letter with the ' $ ' sign.
 
 Example:
+
 ```sh
 docker run -it -v /media/ivan/Transcend/GrafPkg/data/Preproc:/data snpprocimg /bin/bash
 
@@ -107,14 +114,16 @@ $BCFTOOLS --version
 $VCFTOOLS --version
 ```
 Note: VCFTOOLS is launched with VCFtools_wrapper.sh, 
-the wrapper gets the version of the VCFTOOLS if $VCFTOOLS --version is typed
-if any other command is typed vcftools of the indicated version will be launched
+the wrapper gets the version of the VCFTOOLS, if $VCFTOOLS --version is typed in shell.
+If any other command is typed in shell - vcftools of the indicated version will be launched.
 This pipeline uses the VCFTOOLS-0.1.16 version.
 
 If user wants to check the system paths of the installed programs, he might type:
+
 ```
 docker inspect snpprocimg --format='{{json .Config.Env}}'
 ```
+
 All versions might be found in the environment files which are installed in the /soft directory.
 
 Once launched, processing python script shows a welcome message with instructions.
