@@ -57,7 +57,7 @@ The script has the following structure:
 2. Logging configuration
 3. Functions_definitions \
   3.1 Logging message call \
-  3.2 Validation step and error handling \
+  3.2 Validation step and error handling
 4. Processing using pysam library
 5. Main function. Script management
 
