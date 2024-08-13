@@ -1,4 +1,4 @@
-### GRF_dp
+# GRF_dp
 
 ## Introduction
 
@@ -9,9 +9,9 @@ using genotype data»: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469481/
 
 The general task is to define, which of two alleles is a reference or an alternative allele.
 The preprocessing script assumes, that the user has a python version not lower than 3.8.10. and all standard built-in libraries installed.
-Basically there are two main steps in this task:
+Basically there are two main steps in this task: preprocessing, main processing
 
-# 1. Preprocessing
+### 1. Preprocessing
    Preprocessing provides a file in .TSV format transforming FP_SNPs.txt file into a .TSV file (FP_SNPs_10k_GB38_twoAllelsFormat.tsv)
    with columns '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2':
    1.1. The initial FASTA file was downloaded and unzipped via standard gzip program. \
@@ -51,7 +51,7 @@ Basically there are two main steps in this task:
 
    Note: One might do the same preprocessing in bash, if it is preffered. In this pipeline the pythonic way is implemented.
 
-# 2. Main processing
+### 2. Main processing
 
 The provided processing Python script can be launched as provided, assuming that 
 1. All necessary libraries have been installed (using docker or somehow else) \
