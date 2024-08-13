@@ -68,14 +68,14 @@ If the keys are provided incorrectly, the error message will be returned.
 It launches the _validate_tsv_file()_ function, which checks the .tsv file and provides either the error message for each type of error and "FALSE" boolean, 
 or, if the file is correct, it returns "TRUE" boolean. \
 Then, after condition check, \
-      if the validate_tsv_file() function returns "TRUE" \
+if the validate_tsv_file() function returns "TRUE" \
       the _check_reference_alleles()_ function passes through the pandas dataframe \
       obtained during reading the tsv file, to check for alleles in each row, \
       which of these alleles is a reference allele. \
       The checking is in according with the provided reference files, \
       previously acquired during preprocessing of the reference GRCh38.d1.vd1.fa. \
-During such processing each chromosome was transformed into the special file \
-named accordingly to the chromosome, like GRCh38.d1.vd1_chr1.fa. \
+      During such preprocessing each chromosome was transformed into the special file \
+      named accordingly to the chromosome, like GRCh38.d1.vd1_chr1.fa. \
 Alternatively, if the validation with _validate_tsv_file()_ function \
 failed the appropriate error message will be returned. \
 The _pysam_ library used by _is_reference_allele()_ function automatically \
