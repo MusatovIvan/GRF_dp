@@ -92,7 +92,7 @@ python3 FP_SNPs_processing_2.py Reference_fasta_files_dirpath:/data/Chromosomes 
 ```
 
 Note: It is expected that the reference chromosomes lay in the Chromosomes folder, whereas the Input_tsv_file lays directly in the folder mounted as a volume to container,
-according to this manner, the output will be in the same folder, which is mounted to the docker container. The output here is called Results_000.tsv, but the user can call it otherwise.
+according to this manner, the output will be in the same folder, which is mounted to the docker container. The output filename here is Results_000.tsv, but the user can give it another desired name.
 
 The docker image contains 5 bioinformatic libraries with their dependencies: SAMTOOLS, HTSLIB, LIBDEFLATE, VCFTOOLS, BCFTOOLS
 All tools are installed in the /soft directory, the processing script specifically is in the /app folder.
