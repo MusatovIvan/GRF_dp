@@ -33,7 +33,7 @@ Basically there are two main steps in this task: preprocessing and main processi
      1.3.1 The initial FASTA file will be split into pieces according to the number of the chromosome. \
      1.3.2 Initial FP_SNPs.txt will be transformed into a VCF-like file \
    To preprocess files you will need to launch the preprocessing script and provide two arguments separated by whitespace \
-   in a key:value format. The basic keys accepted by script are: --snp, --reference. The keys are not positional. \
+   in a key:value format. The basic keys accepted by script are: --snp, --reference. The keys are not positional.
    
    Example:
    ```sh
