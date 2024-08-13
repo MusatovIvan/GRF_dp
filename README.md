@@ -13,7 +13,7 @@ Basically there are two main steps in this task: preprocessing and main processi
 
 ### 1. Preprocessing
    Preprocessing provides a file in .TSV format transforming FP_SNPs.txt file into a .TSV file (FP_SNPs_10k_GB38_twoAllelsFormat.tsv)
-   with columns '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2':
+   with columns '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2': \
    1.1. The initial FASTA file was downloaded and unzipped via standard gzip program. \
    Downloaded from: https://gdc.cancer.gov/about-data/data-harmonization-and-generation/gdc-reference-files/GRCh38.d1.vd1.fa.gz \
    1.2 GRAF software was downloaded, unzipped and the FP_SNPs.txt file was extracted to the destination folder. \
