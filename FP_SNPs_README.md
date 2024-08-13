@@ -62,18 +62,31 @@ The script has the following structure:
 5. Main function. Script management
 
 Firstly all required libraries are imported, then the logging configuration for a script is performed using built-in logging module.
-The main() function manages the script work and calls all other functions, when the script is launched.
+The _main()_ function manages the script work and calls all other functions, when the script is launched.
 It prints the welcome and help messages, orders to receive the required mandatory keys and processes the keys, if they are provided correctly. 
 If the keys are provided incorrectly, the error message will be returned.
-It launches the validate_tsv_file() function, which checks the .tsv file and provides either the error message for each type of error and "FALSE" boolean, 
-or, if the file is correct, it returns "TRUE" boolean. Then after condition check if the validate_tsv_file() function returns "TRUE" the check_reference_alleles() function passes through
-the pandas dataframe obtained during reading the tsv file, to check for alleles in each row, which of these alleles is a reference allele, according to the provided reference files previously
-acquired during preprocessing of the reference GRCh38.d1.vd1.fa, each chromosome will be the special file named accordingly to the chromosome like
-GRCh38.d1.vd1_chr1.fa. The pysam library used by is_reference_allele() function automatically indexes the questioned FASTA file, to check quickly the letter on the specified position, 
-and the files GRCh38.d1.vd1_chr1.fai are used to check whether the specified nucleotide is a reference or an alternative allele, if the provided allele is same as reference, so 
-that during comparison the function returns TRUE, then the allele will be put in the REF column of the output file,
-if otherwise, then it will be put in the second column of the output file. 
-The output file will get the dataframe returned by check_reference_alleles() function, transformed back to tsv file with df.to_csv() method.
+It launches the _validate_tsv_file()_ function, which checks the .tsv file and provides either the error message for each type of error and "FALSE" boolean, 
+or, if the file is correct, it returns "TRUE" boolean. \
+Then, after condition check, \
+      if the validate_tsv_file() function returns "TRUE" \
+      the _check_reference_alleles()_ function passes through the pandas dataframe \
+      obtained during reading the tsv file, to check for alleles in each row, \
+      which of these alleles is a reference allele. \
+      The checking is in according with the provided reference files, \
+      previously acquired during preprocessing of the reference GRCh38.d1.vd1.fa. \
+During such processing each chromosome was transformed into the special file \
+named accordingly to the chromosome, like GRCh38.d1.vd1_chr1.fa. \
+Alternatively, if the validation with _validate_tsv_file()_ function \
+failed the appropriate error message will be returned. \
+The _pysam_ library used by _is_reference_allele()_ function automatically \
+indexes the questioned FASTA file, to check quickly the letter on the specified position, \
+and the files GRCh38.d1.vd1_chr1.fai are used to check whether the specified \
+nucleotide is a reference or an alternative allele, if the provided allele is \
+same as reference, so that during comparison the function returns TRUE, then \
+the allele will be put in the REF column of the output file, \
+if otherwise, then it will be put in the ALT column of the output file. 
+The output file will get the dataframe returned by __check_reference_alleles()_ function and \
+transformed back to tsv file with _df.to_csv()_ method.
 
 More detailed comments on each important line of the FP_SNPs_processing_2.py code the user might find inside the file itself.
 
