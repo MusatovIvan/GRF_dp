@@ -43,8 +43,9 @@ Basically there are two main steps in this task: preprocessing and main processi
    The preprocessed .txt file is transformed into a VCF-like file with extension .tsv
 
    Note: The initial file FP_SNPs.txt has the following columns: rs#, chromosome, GB37_position, GB38_position, allele_1, allele_2
-
-    The preprocessing script
+   
+   ### The preprocessing script
+   
    1. Removes the GB37_position column and leaves only GB38 position, which is specified as POS in the output file
    2. Moves the columns in the following order: '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2'
    3. Appends "chr" string to the number of chromosome: instead "1" we get "chr1"
