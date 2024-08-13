@@ -55,9 +55,9 @@ The script also provides a simple log file as time.log, giving timestamps of the
 The script has the following structure:
 1. Imports
 2. Logging configuration
-3. Functions_definitions
-  3.1 Logging message call
-  3.2 Validation step and error handling
+3. Functions_definitions \
+  3.1 Logging message call \
+  3.2 Validation step and error handling \
 4. Processing using pysam library
 5. Main function. Script management
 
