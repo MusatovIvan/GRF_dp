@@ -150,9 +150,9 @@ For script execution you will have to provide at least three mandatory key:value
 
 			      Mandatory key:value pairs
 
-		| Reference_fasta_files_dirpath:Reference FASTA Directory path |
-		| Input_tsv_filename_fullpath  : Full Path to input TSV file   |
-		| Output_tsv_filename_fullpath : Full Path for output TSV file |
+		| Reference_fasta_files_dirpath :  Reference FASTA_Directory_path |
+		| Input_tsv_filename_fullpath   :  Full_Path_to_input_TSV_file    |
+		| Output_tsv_filename_fullpath  :  Full_Path_for_output_TSV_file  |
 
 Main task of the processing script:
 
@@ -175,4 +175,4 @@ If you want to see the whole time.log file you can type:
 ```sh
 cat time.log
 ```
-### That's all for now, thank you for your interest in our work.
+### That's all for now, thank you for being curious.
