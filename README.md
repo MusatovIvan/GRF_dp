@@ -13,9 +13,9 @@ Basically there are two main steps in this task:
 # 1. Preprocessing
    Preprocessing provides a file in .TSV format transforming FP_SNPs.txt file into a .TSV file (FP_SNPs_10k_GB38_twoAllelsFormat.tsv)
    with columns '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2':
-   1.1. The initial FASTA file was downloaded and unzipped via standard gzip program.
-   Downloaded from: https://gdc.cancer.gov/about-data/data-harmonization-and-generation/gdc-reference-files/GRCh38.d1.vd1.fa.gz
-   1.2 GRAF software was downloaded, unzipped and the FP_SNPs.txt file was extracted to the destination folder.
+   1.1. The initial FASTA file was downloaded and unzipped via standard gzip program. \
+   Downloaded from: https://gdc.cancer.gov/about-data/data-harmonization-and-generation/gdc-reference-files/GRCh38.d1.vd1.fa.gz \
+   1.2 GRAF software was downloaded, unzipped and the FP_SNPs.txt file was extracted to the destination folder. \
    Downloaded from: http://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/GetZip.cgi?zip_name=GRAF_files.zip
    ```sh
    cd download_folder/ 
@@ -25,12 +25,12 @@ Basically there are two main steps in this task:
    tar -xzf destination/folder/file.tar.gz && rm destination/folder/file.tar.gz
    #
    ```
-   1.3 The next step assumes that the files were downloaded, unzipped and moved to their destination folder.
-   The python script is used to allow files preprocessing during which:
-     1.3.1 The initial FASTA file will be split into pieces according to the number of the chromosome.
-     1.3.2 Initial FP_SNPs.txt will be transformed into a VCF-like file
-   To preprocess files you will need to launch the preprocessing script and provide two arguments separated by whitespace
-   in a key:value format. The basic keys accepted by script are: --snp, --reference. The keys are not positional.
+   1.3 The next step assumes that the files were downloaded, unzipped and moved to their destination folder. \
+   The python script is used to allow files preprocessing during which: \
+     1.3.1 The initial FASTA file will be split into pieces according to the number of the chromosome. \
+     1.3.2 Initial FP_SNPs.txt will be transformed into a VCF-like file \
+   To preprocess files you will need to launch the preprocessing script and provide two arguments separated by whitespace \
+   in a key:value format. The basic keys accepted by script are: --snp, --reference. The keys are not positional. \
    
    Example:
    ```sh
@@ -42,19 +42,19 @@ Basically there are two main steps in this task:
    Note: The initial file FP_SNPs.txt has the following columns: rs#, chromosome, GB37_position, GB38_position, allele_1, allele_2
 
     The preprocessing script
-   1. Removes the GB37_position column and leaves only GB38 position, which is specified as POS in the output file 
-   2. Moves the columns in the following order: '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2'
-   3. Appends "chr" string to the number of chromosome: instead "1" we get "chr1"
-   4. Appends "rs" string to the number of RS_ID: instead "4184584" we get "rs4184584"
-      Reference SNP cluster ID - rsID number is a unique label ("rs" followed by a number) used by researchers and databases to identify a specific SNP (Single Nucleotide Polymorphism))
+   1. Removes the GB37_position column and leaves only GB38 position, which is specified as POS in the output file \
+   2. Moves the columns in the following order: '#CHROM', 'POS', 'RS_ID', 'ALLELE_1', 'ALLELE_2' \
+   3. Appends "chr" string to the number of chromosome: instead "1" we get "chr1" \
+   4. Appends "rs" string to the number of RS_ID: instead "4184584" we get "rs4184584" \
+      Reference SNP cluster ID - rsID number is a unique label ("rs" followed by a number) used by researchers and databases to identify a specific SNP (Single Nucleotide Polymorphism)) \
 
    Note: One might do the same preprocessing in bash, if it is preffered. In this pipeline the pythonic way is implemented.
 
 # 2. Main processing
 
 The provided processing Python script can be launched as provided, assuming that 
-1. All necessary libraries have been installed (using docker or somehow else)
-2. All mandatory key:value pairs have been provided (see below)
+1. All necessary libraries have been installed (using docker or somehow else) \
+2. All mandatory key:value pairs have been provided (see below) \
 
 Probable solution is to install docker on your system and build a docker image,
 launching the docker container with all required libraries and dependencies as provided in the pipeline.
@@ -158,4 +158,7 @@ The output file has following fields
 The script also provides a simple log file as time.log, giving timestamps of the script execution
 File time.log can be found in /app/ directory with the FP_SNPs_processing_2.py
 
-
+If you want to see the whole time.log file you can type:
+```sh
+cat time.log
+```
